@@ -2,13 +2,13 @@ README update
 # Esoreflex-docker
 Scripts que instalan Esoreflex en un docker usando el script de la ESO. Esto permite instalar esoreflex de manera aislada del sistema operativo del pc.
 
-## Requisitos (para wsl-ubuntu desde windows)
+## Requisitos (para wsl-ubuntu desde windows y ubuntu nativo)
 
 Se debe instalar [Xming](http://www.straightrunning.com/XmingNotes/) en windows para acceder a la GUI de aplicaciones que corren en wsl-ubuntu. Para poder permitir la conexion con wsl-ubuntu de manera simple se sugiere abilitar la opción ''Disable access control'' en Xlaunch. Sólo abilitar esta opcion si estamos ok con los riesgos de seguiridad (comom todo corre en el mismo pc no hay problema).
 
-Docker es tambien necesario para crear los contenedores en donde se instalará esoreflex.  
-Para instalar Docker en Ubuntu(o Pop_os!), seguir los pasos en este [link](https://docs.docker.com/engine/install/ubuntu/)
+Docker es tambien necesario para crear los contenedores en donde se instalará esoreflex. 
 Para instalar Docker Desktop en Windows y usarlo via wsl, usar este [link](https://docs.docker.com/desktop/setup/install/windows-install/).
+Para instalar Docker en Ubuntu(o Pop_os!), seguir los pasos en este [link](https://docs.docker.com/engine/install/ubuntu/)
 
 En el caso de wsl, Docker Desktop debe estar configurado para integrarse con wsl. Para verificar esto, En Docker Desktop ir a Settings → Resources → WSL Integration
 
