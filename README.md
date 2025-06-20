@@ -21,9 +21,11 @@ Para crear el contenedor, primero creamos una carpeta en donde descargamos el ar
 
 ### Instalar Esoreflex en el contenedor "esoreflex-base"
 
-El siguiente paso es instalar Esoreflex en esoreflex-base. Para ello, primero ejecutamos el script `./run_esoreflex_container.sh --root image_name` desde wsl-ubuntu para entrar en modo interactivo y poder hacer uso de la terminal en esoreflex-base. `--root` permite acceder en modo root (ya que el dockerfile crea el contenedor en modo root), mientras que `image_name` es el nombre de la imagen creada a partir de esoreflex-base. Como ejemplo, en caso de instalar sólo la pipeline de ERIS, `image_name` podria ser "esoreflex-eris".
+El siguiente paso es instalar Esoreflex en esoreflex-base. Para ello, primero ejecutamos el script `./run_esoreflex_container.sh --root esoreflex-base image_name` desde wsl-ubuntu para entrar en modo interactivo y poder hacer uso de la terminal en esoreflex-base. `--root` permite acceder en modo root (ya que el dockerfile crea el contenedor en modo root), mientras que `image_name` es el nombre de la imagen creada a partir de esoreflex-base. Como ejemplo, en caso de instalar sólo la pipeline de ERIS, `image_name` podria ser "esoreflex-eris".
 
-Una vez dentro del contenedor, ejecutamos `./installer.sh`, y seguimos los pasos del instalador de Esoreflex. Completado el proceso, ya tendremos instalado Esoreflex con la(s) pipelines requeridas.
+Una vez dentro del contenedor, ejecutamos `./installer.sh`, y seguimos los pasos del instalador de Esoreflex. Completado el proceso, ya tendremos instalado Esoreflex con la(s) pipelines requeridas en la imagen "image_name".
+
+Para ejecutar Esoreflex dentro de `image_name` se debe correr el comando `/home/install/bin/./esoreflex`. Para no repetir esta linea de comando cada vez que se quiera usar Esoreflex, se puede crear un alias, i.e., `echo "alias esoreflex='/home/install/bin/./esoreflex'" >> ~/.bashrc && source ~/.bashrc`. De esta manera, escribiendo `esoreflex` desde la terminal de `image_name` se puede correr Esoreflex inmediatamente.
 
 
 
