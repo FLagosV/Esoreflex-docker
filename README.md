@@ -27,6 +27,10 @@ Una vez dentro del contenedor, ejecutamos `./installer.sh`, y seguimos los pasos
 
 Para ejecutar Esoreflex dentro de `image_name` se debe correr el comando `/home/install/bin/./esoreflex`. Para no repetir esta linea de comando cada vez que se quiera usar Esoreflex, se puede crear un alias, i.e., `echo "alias esoreflex='/home/install/bin/./esoreflex'" >> ~/.bashrc && source ~/.bashrc`. De esta manera, escribiendo `esoreflex` desde la terminal de `image_name` se puede correr Esoreflex inmediatamente.
 
+### Revisar lista de pipelines instaladas.
+
+Para ver las pipelines disponibles usar el comando `esoreflex -l`. para correr esoreflex con una pipeline especifica (e.g., sphere_irdis_ci_dbi_dpi ), usar el comando `esoreflex sphere_irdis_ci_dbi_dpi`
+
 
 
 
