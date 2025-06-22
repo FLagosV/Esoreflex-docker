@@ -21,8 +21,8 @@ Para crear el contenedor, primero creamos una carpeta en donde descargamos el ar
 
 ### Instalar Esoreflex en el contenedor "esoreflex-base"
 
-El siguiente paso es instalar Esoreflex en esoreflex-base. Para ello, primero hacemos ejecutable el script run_esoreflex_container.sh desde wsl-buntu con el comando `chmod +x run_esoreflex_container2.sh`. Luego,
-ejecutamos `./run_esoreflex_container.sh --root --save esoreflex-base image_name` desde wsl-ubuntu para entrar en modo interactivo y poder hacer uso de la terminal en esoreflex-base. `--root` permite acceder en modo root (ya que el dockerfile crea el contenedor en modo root), mientras que `image_name` es el nombre de la imagen creada a partir de esoreflex-base. Como ejemplo, en caso de instalar sólo la pipeline de ERIS, `image_name` podria ser "esoreflex-eris".
+El siguiente paso es instalar Esoreflex en esoreflex-base. Para ello, primero hacemos ejecutable el script run_esoreflex_container.sh desde wsl-buntu con el comando `chmod +x run_esoreflex_image.sh`. Luego,
+ejecutamos `./run_esoreflex_image.sh --root --save esoreflex-base image_name` desde wsl-ubuntu para entrar en modo interactivo y poder hacer uso de la terminal en esoreflex-base. `--root` permite acceder en modo root (ya que el dockerfile crea el contenedor en modo root), mientras que `image_name` es el nombre de la imagen creada a partir de esoreflex-base. Como ejemplo, en caso de instalar sólo la pipeline de ERIS, `image_name` podria ser "esoreflex-eris".
 
 Una vez dentro del contenedor, ejecutamos `./installer.sh`, y seguimos los pasos del instalador de Esoreflex. Completado el proceso, ya tendremos instalado Esoreflex con la(s) pipelines requeridas en la imagen "image_name".
 
@@ -32,7 +32,9 @@ Para ejecutar Esoreflex dentro de `image_name` se debe correr el comando `/home/
 
 Para ver las pipelines disponibles usar el comando `esoreflex -l`. para correr esoreflex con una pipeline especifica (e.g., sphere_irdis_ci_dbi_dpi ), usar el comando `esoreflex sphere_irdis_ci_dbi_dpi`
 
+## Montar carpeta o disco externo en la imagen.
 
+Antes de correr la imagen, montar en wsl-ubuntu (o ubuntu nativo) la carpeta o disco externo con el comando `sudo mount -t drvfs E: /mnt/e` (en este caso es el disco externo E). Con la carpeta/disco montada procedemos a montarla en la imagen. Para esto, al momento de ejecutar `./run_esoreflex_image.sh` agregamos el input `--external /mnt/e`.
 
 
 
