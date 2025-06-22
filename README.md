@@ -36,6 +36,10 @@ Para ver las pipelines disponibles usar el comando `esoreflex -l`. para correr e
 
 Antes de correr la imagen, montar en wsl-ubuntu (o ubuntu nativo) la carpeta o disco externo con el comando `sudo mount -t drvfs E: /mnt/e` (en este caso es el disco externo E). Con la carpeta/disco montada procedemos a montarla en la imagen. Para esto, al momento de ejecutar `./run_esoreflex_image.sh` agregamos el input `--external /mnt/e`.
 
+## Guardar la imagen
+
+Para guardar la imagen y usarla en otro pc se debe ejecutar `docker save -o esoreflex-sphere.tar esoreflex-sphere:latest`. Esto crea un archivo llamado esoreflex-sphere.tar con toda la imagen. Se puede cambiar el nombre "esoreflex-sphere" y el tag (:latest) si hay otra etiqueta.
+
 
 
 
