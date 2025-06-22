@@ -33,5 +33,9 @@ RUN wget $REFLEX_INSTALLER_URL -O installer.sh && \
 #     ./installer.sh -q -dir /home && \
 #     rm installer.sh
 
+#Creamos alias para ejecutar esoreflex mas facil
+RUN echo "alias esoreflex='/home/install/bin/./esoreflex'" >> /root/.bashrc
+
+
 CMD ["/bin/bash"]
 
