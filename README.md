@@ -10,8 +10,9 @@ Docker es tambien necesario para crear los contenedores en donde se instalará e
 Para instalar Docker Desktop en Windows y usarlo via wsl, usar este [link](https://docs.docker.com/desktop/setup/install/windows-install/).
 Para instalar Docker en Ubuntu(o Pop_os!), seguir los pasos en este [link](https://docs.docker.com/engine/install/ubuntu/)
 
-En el caso de wsl, Docker Desktop debe estar configurado para integrarse con wsl. Para verificar esto, En Docker Desktop ir a Settings → Resources → WSL Integration
+En el caso de wsl, Docker Desktop debe estar configurado para integrarse con wsl. Para verificar esto, En Docker Desktop ir a Settings → Resources → WSL Integration.
 
+Es importante tener conexión a internet para todo el proceso de instalación.
 
 ## Creando el contenedor con Esoreflex
 
