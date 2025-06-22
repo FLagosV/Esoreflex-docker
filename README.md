@@ -25,7 +25,7 @@ El siguiente paso es instalar Esoreflex en esoreflex-base. Para ello, primero ej
 
 Una vez dentro del contenedor, ejecutamos `./installer.sh`, y seguimos los pasos del instalador de Esoreflex. Completado el proceso, ya tendremos instalado Esoreflex con la(s) pipelines requeridas en la imagen "image_name".
 
-Para ejecutar Esoreflex dentro de `image_name` se debe correr el comando `/home/install/bin/./esoreflex`. Para no repetir esta linea de comando cada vez que se quiera usar Esoreflex, se puede crear un alias, i.e., `echo "alias esoreflex='/home/install/bin/./esoreflex'" >> ~/.bashrc && source ~/.bashrc`. De esta manera, escribiendo `esoreflex` desde la terminal de `image_name` se puede correr Esoreflex inmediatamente.
+Para ejecutar Esoreflex dentro de `image_name` se debe correr el comando `/home/install/bin/./esoreflex`. Para no repetir esta linea de comando cada vez que se quiera usar Esoreflex, se puede crear un alias, i.e., `echo "alias esoreflex='/home/install/bin/./esoreflex'" >> /root/.bashrc && source /root/.bashrc`. De esta manera, escribiendo `esoreflex` desde la terminal de `image_name` se puede correr Esoreflex inmediatamente.
 
 ### Revisar lista de pipelines instaladas.
 
