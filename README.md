@@ -41,8 +41,50 @@ Antes de correr la imagen, montar en wsl-ubuntu (o ubuntu nativo) la carpeta o d
 Para guardar la imagen y usarla en otro pc se debe ejecutar `docker save -o esoreflex-sphere.tar esoreflex-sphere:latest`. Esto crea un archivo llamado esoreflex-sphere.tar con toda la imagen. Se puede cambiar el nombre "esoreflex-sphere" y el tag (:latest) si hay otra etiqueta.
 
 
+## Comandos de Docker útiles 
+
+### Contenedores
+| Comando                                  | Descripción                                      |
+|------------------------------------------|--------------------------------------------------|
+| docker run -it <imagen>                  | Ejecuta un contenedor de forma interactiva       |
+| docker ps                                | Lista contenedores activos                       |
+| docker ps -a                             | Lista todos los contenedores                     |
+| docker start <contenedor>                | Inicia un contenedor detenido                    |
+| docker stop <contenedor>                 | Detiene un contenedor activo                     |
+| docker restart <contenedor>              | Reinicia un contenedor                           |
+| docker exec -it <contenedor> bash        | Entra a un contenedor con bash                   |
+| docker attach <contenedor>               | Se conecta a la terminal activa del contenedor   |
+| docker rm <contenedor>                   | Elimina un contenedor detenido                   |
+| docker rm -f <contenedor>                | Fuerza la eliminación incluso si está en uso     |
+| docker logs <contenedor>                 | Muestra el log del contenedor                    |
+| docker inspect <contenedor>              | Muestra detalles del contenedor                  |
+| docker rename <viejo> <nuevo>            | Renombra un contenedor                           |
+| docker cp <cont:archivo> <destino>       | Copia archivos entre contenedor y host           |
+
+
+### Imagenes
+| Comando                                  | Descripción                                      |
+|------------------------------------------|--------------------------------------------------|
+| docker images                            | Lista todas las imágenes locales                 |
+| docker build -t nombre:tag .             | Crea una imagen desde un Dockerfile              |
+| docker pull <imagen>                     | Descarga una imagen del Docker Hub               |
+| docker push <imagen>                     | Sube una imagen al Docker Hub                    |
+| docker tag <img> <nuevo:tag>             | Renombra o reetiqueta una imagen                 |
+| docker rmi <imagen>                      | Elimina una imagen                               |
+| docker save -o imagen.tar <imagen>       | Exporta una imagen a un archivo `.tar`           |
+| docker load -i imagen.tar                | Importa una imagen desde un archivo `.tar`       |
+| docker history <imagen>                  | Muestra el historial de capas de la imagen       |
+| docker commit <contenedor> <nueva_img>   | Guarda cambios del contenedor como nueva imagen  |
 
 
 
+### Limpieza y mantenimiento
+
+| Comando                                  | Descripción                                      |
+|------------------------------------------|--------------------------------------------------|
+| docker system prune                      | Limpia todo lo no utilizado                      |
+| docker image prune                       | Elimina imágenes sin etiqueta `<none>`           |
+| docker volume prune                      | Elimina volúmenes no utilizados                  |
+| docker container prune                   | Elimina contenedores detenidos                   |
 
 
