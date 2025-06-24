@@ -95,6 +95,7 @@ if [ "$SAVE_CHANGES" = true ]; then
   echo "Eliminando contenedor temporal..."
   docker rm "$CONTAINER_NAME"
 else
-  echo "ℹ️ No se guardaron cambios. El contenedor '$CONTAINER_NAME' permanece en Docker."
+  echo "ℹ️ No se guardaron cambios."
+  docker rm "$CONTAINER_NAME"
 fi
 
