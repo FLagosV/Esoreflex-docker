@@ -21,7 +21,7 @@ Para crear el contenedor, primero creamos una carpeta en donde descargamos el ar
 
 ### Instalar Esoreflex en el contenedor "esoreflex-base"
 
-El siguiente paso es instalar Esoreflex en esoreflex-base. Para ello, primero hacemos ejecutable el script run_esoreflex_container.sh desde wsl-buntu con el comando `chmod +x run_esoreflex_image.sh`. Luego,
+El siguiente paso es instalar Esoreflex en esoreflex-base. Para ello, primero hacemos ejecutable el script run_esoreflex_image.sh desde wsl-buntu con el comando `chmod +x run_esoreflex_image.sh`. Luego,
 ejecutamos `./run_esoreflex_image.sh --root --save esoreflex-base image_name` desde wsl-ubuntu para entrar en modo interactivo y poder hacer uso de la terminal en esoreflex-base. `--root` permite acceder en modo root (ya que el dockerfile crea el contenedor en modo root), mientras que `image_name` es el nombre de la imagen creada a partir de esoreflex-base. Como ejemplo, en caso de instalar sólo la pipeline de ERIS, `image_name` podria ser "esoreflex-eris".
 
 Una vez dentro del contenedor, ejecutamos `./installer.sh`, y seguimos los pasos del instalador de Esoreflex. Completado el proceso, ya tendremos instalado Esoreflex con la(s) pipelines requeridas en la imagen "image_name".
@@ -31,6 +31,10 @@ Para ejecutar Esoreflex dentro de `image_name` se debe correr el comando `/home/
 ### Revisar lista de pipelines instaladas.
 
 Para ver las pipelines disponibles usar el comando `esoreflex -l`. para correr esoreflex con una pipeline especifica (e.g., sphere_irdis_ci_dbi_dpi ), usar el comando `esoreflex sphere_irdis_ci_dbi_dpi`
+
+## Ejecutar imagen con Esoreflex
+
+Para ejecutar la imagen, nos vamos a la carpeta en donde se encuentra el archivo run_esoreflex_image.sh, abrimos una terminal y ejecutamos `./run_esoreflex_image.sh --root <image_name>`, con "image_name" el nombre de la imagen. Para ver el listado de imagenes disponibles, ejecutamos el comando `docker images`. Si quieremos correr la imagen guardando cualquier cambios hecho, debemos ejecutar el archivo .sh con la opcion `--save`, i.e.,  `./run_esoreflex_image.sh --root --save <image_name>  <new_image_name>`.
 
 ## Montar carpeta o disco externo en la imagen.
 
