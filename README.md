@@ -34,7 +34,9 @@ Para ver las pipelines disponibles usar el comando `esoreflex -l`. para correr e
 
 ## Ejecutar imagen con Esoreflex
 
-Para ejecutar la imagen, nos vamos a la carpeta en donde se encuentra el archivo run_esoreflex_image.sh, abrimos una terminal y ejecutamos `./run_esoreflex_image.sh --root <image_name>`, con "image_name" el nombre de la imagen. Para ver el listado de imagenes disponibles, ejecutamos el comando `docker images`. Si quieremos correr la imagen guardando cualquier cambios hecho, debemos ejecutar el archivo .sh con la opcion `--save`, i.e.,  `./run_esoreflex_image.sh --root --save <image_name>  <new_image_name>`.
+Si estamos trabajando por primera vez con la imagen desde otra máquina. primero debemos cargarla al docker local con el comando `docker load -i <image_name>.tar` (recordar poner la extension de la imagen y el path completo en caso de ejecutar el comando fuera de la carpeta que aloja la imagen).
+
+Luego, para ejecutar la imagen, nos vamos a la carpeta en donde se encuentra el archivo run_esoreflex_image.sh, abrimos una terminal y ejecutamos `./run_esoreflex_image.sh --root <image_name>`, con "image_name" el nombre de la imagen. Para ver el listado de imagenes disponibles, ejecutamos el comando `docker images`. Si quieremos correr la imagen guardando cualquier cambios hecho, debemos ejecutar el archivo .sh con la opcion `--save`, i.e.,  `./run_esoreflex_image.sh --root --save <image_name>  <new_image_name>`.
 
 ## Montar carpeta o disco externo en la imagen.
 
